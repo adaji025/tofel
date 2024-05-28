@@ -1,0 +1,63 @@
+name: Vtalkai-language-dev CI-CD
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "staging" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  web-deploy:
+    name : Deploy Development
+    
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    
+    env:
+      # Define environment variables for each branch workflow
+      # Client Config
+      # @ Desc : this config help the app to acheive multi tenancy
+      VITE_VTALK_API_ENV : ${{ secrets.API_ENV_DEV }}
+      VITE_VTALK_API_URL_LOCAL : ${{ secrets.API_URL_LOCAL }}
+      VITE_VTALK_API_URL_PROD : ${{ secrets.API_URL_PROD }}
+
+      # Vtalk Config 
+      # @ Desc : This is only for local dev, comment / un-comment as need basis
+      # - ${{ secrets.VTALK_CLIENT_ID_LOCAL }}
+      # - ${{ secrets.VTALK_CLIENT_ID_LIVE }}
+
+      VITE_VTALK_SHORT_NAME : vtalk
+      VITE_VTALK_CLIENT_ID_LOCAL : 7d0e6573-36c2-4416-abca-5f15325e4c5f 
+      VITE_VTALK_CLIENT_ID_LIVE : 7d0e6573-36c2-4416-abca-5f15325e4c5f
+      VITE_VTALK_GUEST_KEY : ${{ secrets.VTALK_GUEST_KEY }}
+ 
+      # General Config
+      # @ Desc : This is basically general config for the app and sub-systems
+      VITE_OPEN_API_KEY : ${{ secrets.OPEN_API_KEY }}
+      VITE_ORG_ID : ${{ secrets.ORG_ID }}
+      VITE_GOOGLE_API_KEY : ${{ secrets.GOOGLE_API_KEY }}
+      VITE_VTALK_SPEECH_KEY : ${{ secrets.SPEECH_KEY }}
+      VITE_VTALK_GUEST_SECRET : ${{ secrets.GUEST_SECRET }}
+      VITE_VTALK_OVERIDE_AUTH : false
+    
+    # Steps represent a sequence task that will be executed as part of the job
+    steps:
+      - name : Get latest code
+        uses : actions/checkout@v2
+
+      - name: Build Vite Project
+        run: npm ci && npm run build
+
+      - name : Sync files
+        uses : SamKirkland/FTP-Deploy-Action@4.1.0
+        with : 
+          server : ftp.vtalkai.com
+          username : ${{ secrets.USERNAME_DEV }}
+          password : ${{ secrets.PASSWORD_DEV }}
+          server-dir : /
+          local-dir: dist/
