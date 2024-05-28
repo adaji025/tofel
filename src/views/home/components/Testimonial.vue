@@ -11,11 +11,10 @@
       <div>
         <Rating />
         <div class="font-bold text-[24px] lg:text-[32px] mt-5">
-          VTalk's AI coaching skyrocketed my IELTS speaking score! Immersive
-          practice, instant feedback - I aced my goal!
+          {{ text }}
         </div>
-        <div class="font-bold mt-5">— Candice Wu</div>
-        <div class="mt-2">Head of Design, Layers</div>
+        <div class="font-bold mt-5">— {{ name }}</div>
+        <!-- <div class="mt-2">Head of Design, Layers</div> -->
       </div>
     </div>
   </div>
@@ -23,7 +22,13 @@
 <script>
 import Rating from "./Rating.vue";
 export default {
-  components: {Rating}
-}
+  components: { Rating },
+
+  props: {
+    image: { type: String },
+    text: { type: String },
+    name: { type: String },
+  },
+};
 </script>
 <style></style>
