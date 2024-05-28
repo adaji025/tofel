@@ -2,7 +2,7 @@
   <div
     class="my-20 text-white mx-auto px-5 lg:px-10 improve min-h-[500px] flex flex-col gap-3 justify-center items-center"
   >
-    <div class="max-w-[500px]">
+    <div class="max-w-[550px]">
       <div
         class="text-[24px] sm:text-[30px] lg:text-[48px] text-center font-bold"
       >

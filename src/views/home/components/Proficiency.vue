@@ -28,10 +28,9 @@
         >
           02
         </div>
-        <div class="mt-5 font-bold text-2xl">Choose a Topic</div>
+        <div class="mt-5 font-bold text-2xl">Select Your Exam Type</div>
         <div class="mt-3">
-          Select the topic of your choice to start your personalized
-          conversations.
+          Select your TOFEL type to start your personalized mock exams.
         </div>
       </div>
       <div
@@ -44,7 +43,7 @@
         </div>
         <div class="mt-5 font-bold text-2xl">Start Practicing</div>
         <div class="mt-3">
-          Start speech practice across diverse topics in conversations and track
+          Start speech practice across diverse topics in mock exams and track
           your progress with AI feedback.
         </div>
       </div>

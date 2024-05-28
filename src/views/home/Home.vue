@@ -40,18 +40,7 @@ export default {
   <PricingPlanVue />
   <Testimonial />
   <ImproveSkill />
-  <Faq>
-    <div class="text-center mt-10">
-      <div class="font-semibold">How much does this cost?</div>
-      <div
-        @click="$router.push('/#vtalk-pricing')"
-        class="cursor-pointer text-primary font-semibold mt-2 flex justify-center items-center gap-2"
-      >
-        Pricing Options
-        <img src="@/assets/svg/arrow-right.svg" alt="arrow right" />
-      </div>
-    </div>
-  </Faq>
+  <Faq> </Faq>
   <ContactUs />
   <Footer></Footer>
 </template>
