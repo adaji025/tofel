@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light mt-32 py-32 text-secondary">
+  <div class="bg-light py-32 text-secondary">
     <div
       class="app-width flex flex-col sm:flex-row justify-between gap-10 lg:gap-20"
     >
@@ -14,7 +14,6 @@
           {{ text }}
         </div>
         <div class="font-bold mt-5">— {{ name }}</div>
-        <!-- <div class="mt-2">Head of Design, Layers</div> -->
       </div>
     </div>
   </div>

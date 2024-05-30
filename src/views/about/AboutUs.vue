@@ -94,7 +94,7 @@
         /> -->
       </div>
     </div>
-    <Testimonial />
+    <TestimonialCarouselVue />
     <div class="mt-20 bg-[#0D0F1C]">
       <div
         class="py-20 text-white flex flex-col justify-center items-center px-5"
@@ -114,15 +114,16 @@
 import NavbarVue from "@/components/Headers/Navbar.vue";
 import Button from "@/components/Button.vue";
 import Footer from "@/components/Footer.vue";
-import Testimonial from "../home/components/Testimonial.vue";
+import TestimonialCarouselVue from "../home/components/TestimonialCarousel.vue";
 
 export default {
   components: {
     NavbarVue,
     Button,
-    Testimonial,
     Footer,
+    TestimonialCarouselVue,
   },
+
   methods: {
     handleTryIt() {
       const auth = Auth.UserSettings();
@@ -168,4 +169,4 @@ export default {
   },
 };
 </script>
-<style lang=""></style>
+<style></style>

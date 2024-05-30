@@ -4,7 +4,6 @@
  */
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/views/home/Home.vue";
-import Try from "@/views/exam/Try.vue";
 import ChooseLanguage from "@/views/exam/ChooseLanguage.vue";
 import ChooseCategory from "@/views/exam/ChooseCategory.vue";
 import Transition from "@/views/exam/Transition.vue";
@@ -61,7 +60,7 @@ const routes = [
    * Dashboard & Acounts
    * @description : result history, profile, upgrade plan & others 
    */
-  { path: "/try", name : 'Try' , component: Try },
+  { path: "/try", name : 'Dashboard' , component: Dashboard },
   { path: "/choose-language", name : 'ChooseLanguage' ,component: ChooseLanguage },
   { path: "/choose-category", name : 'ChooseCategory' ,component: ChooseCategory },
   { path: "/transition", name : 'Transition' , component: Transition },

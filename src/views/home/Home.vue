@@ -6,11 +6,11 @@ import Master from "@/views/home/components/Master.vue";
 import Feedback from "@/views/home/components/Feedback.vue";
 import Proficiency from "@/views/home/components/Proficiency.vue";
 import PricingPlanVue from "@/views/home/components/PricingPlan.vue";
-import Testimonial from "@/views/home/components/Testimonial.vue";
 import ContactUs from "@/views/home/components/ContactUs.vue";
 import ImproveSkill from "@/views/home/components/ImproveSkill.vue";
 import Faq from "@/components/Faq.vue";
 import Footer from "@/components/Footer.vue";
+import TestimonialCarousel from "./components/TestimonialCarousel.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 
@@ -23,11 +23,11 @@ export default {
     Feedback,
     Proficiency,
     PricingPlanVue,
-    Testimonial,
     ImproveSkill,
     Faq,
     Footer,
     ContactUs,
+    TestimonialCarousel,
     Swiper,
     SwiperSlide,
 
@@ -77,16 +77,7 @@ export default {
   <Feedback />
   <Proficiency />
   <PricingPlanVue />
-  <swiper
-    :slides-per-view="1"
-    :space-between="50"
-    @swiper="onSwiper"
-    @slideChange="onSlideChange"
-  >
-    <swiper-slide v-for="(item, index) in testimonialData" :key="{ index }">
-      <Testimonial :name="item.name" :image="item.image" :text="item.text" />
-    </swiper-slide>
-  </swiper>
+  <TestimonialCarousel />
   <ImproveSkill />
   <Faq> </Faq>
   <ContactUs />

@@ -1,11 +1,16 @@
 <script>
 import Button from "@/components/Button.vue";
-import Testimonial from "@/views/home/components/Testimonial.vue";
 import Footer from "@/components/Footer.vue";
 import NavbarVue from "@/components/Headers/Navbar.vue";
+import TestimonialCarouselVue from "../home/components/TestimonialCarousel.vue";
 
 export default {
-  components: { NavbarVue, Button, Testimonial, Footer },
+  components: {
+    NavbarVue,
+    Button,
+    Footer,
+    TestimonialCarouselVue,
+  },
   data() {
     return {
       items: [
@@ -51,7 +56,7 @@ export default {
 };
 </script>
 <template lang="">
-  <div class="bg-[#F8F9FC]">
+  <div class="bg-[#F8F9FC] text-secondary">
     <NavbarVue />
     <div class="mt-20 max-w-[1400px] mx-auto px-5 lg:px-10 text-secondary">
       <div class="text-[36px] lg:text-[48px] font-bold text-center">FAQs</div>
@@ -95,7 +100,7 @@ export default {
       >
         <div class="max-w-[576px]">
           <div class="text-[32px] lg:text-[48px] font-bold">
-            Join 1,000+ People Improving with VTalk
+            Join 1,000+ People Improving with TOFEL
           </div>
           <div class="flex gap-3 mt-5">
             <Button variant="outline" class="py-4 w-full sm:w-[unset]"
@@ -110,7 +115,7 @@ export default {
         </div>
       </div>
     </div>
-    <Testimonial />
+    <TestimonialCarouselVue />
     <div class="mt-20 bg-[#0D0F1C]">
       <div
         class="py-20 text-white flex flex-col justify-center items-center px-5"
