@@ -6,7 +6,7 @@
           ? 'w-[25%]'
           : mainStep === '2'
           ? 'w-[50%]'
-          : mainStep === 3
+          : mainStep === '3'
           ? 'w-[75%]'
           : 'w-[100%]'
       "
@@ -36,6 +36,10 @@
             step === 3 && mainStep === 1
               ? openModal()
               : step === 5 && mainStep === '2'
+              ? openModal()
+              : step === 5 && mainStep === '3'
+              ? openModal()
+              : step === 4 && mainStep === 4
               ? openModal()
               : setStep()
           "

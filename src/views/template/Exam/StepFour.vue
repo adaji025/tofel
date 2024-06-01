@@ -5,63 +5,33 @@
     <AuthHeader />
 
     <div class="py-20 bg-[#F8F9FC]">
-      <div v-if="step === 0" class="blur">
+      <div v-if="step === 0">
         <div class="text-center px-5">
           <div class="mt-5 text-sm text-primary text-center">Directions</div>
-          <div class="text-2xl font-bold">Speaking Question 1</div>
+          <div class="text-2xl font-bold">Speaking Question 4</div>
           <div class="mt-3 max-w-[576px] mx-auto">
-            In psychology, the feeling of complete and energized focus in an
-            activity is called flow. People who enter a state of flow lose their
-            sense of time and have a feeling of great satisfaction. They become
-            completely involved in an activity for its own sake rather than for
-            what may result from the activity, such as money or prestige.
-            Contrary to expectation, flow usually happens not during relaxing
-            moments of leisure and entertainment, but when we are actively
-            involved in a difficult enterprise, in a task that stretches our
-            mental or physical abilities.”
+            You will now give your opinion about a familiar topic. After you
+            hear the question, you will have 15 seconds to prepare and 45
+            seconds to speak.
           </div>
         </div>
       </div>
 
-      <div v-if="step === 1">
-        <div class="text-center px-5">
-          <div
-            class="mt-5 text-sm text-primary text-center flex items-center justify-center gap-2"
-          >
-            <div>Suggested Reading time: 45 seconds</div>
-            <img src="@/assets/svg/book.svg" alt="" />
-          </div>
-          <div class="mt-3 max-w-[576px] mx-auto">
-            In psychology, the feeling of complete and energized focus in an
-            activity is called flow. People who enter a state of flow lose their
-            sense of time and have a feeling of great satisfaction. They become
-            completely involved in an activity for its own sake rather than for
-            what may result from the activity, such as money or prestige.
-            Contrary to expectation, flow usually happens not during relaxing
-            moments of leisure and entertainment, but when we are actively
-            involved in a difficult enterprise, in a task that stretches our
-            mental or physical abilities.”
-          </div>
-        </div>
-      </div>
-
-      <div v-if="step === 2" class="max-w-[576px] mx-auto text-center">
+      <div v-if="step === 1" class="max-w-[576px] mx-auto text-center">
         <img src="@/assets/png/direction.png" alt="" class="mx-auto" />
-        <div class="text-xl md:text-2xl font-bold mt-3">
-          Listen to this conversation
+        <div class="text-xl md:text-2xl font-bold">Listen to this lecture</div>
+      </div>
+
+      <div v-if="step === 2" class="max-w-[576px] mx-auto text-center px-5">
+        <div class="text-xl md:text-2xl font-bold">Speaking Question 4</div>
+        <div class="mt-3">
+          Explain flow and how the example used by the professor illustrates the
+          concept.
         </div>
       </div>
 
       <div v-if="step === 3" class="max-w-[576px] mx-auto text-center px-5">
-        <div class="text-xl md:text-2xl font-bold">Speaking Question 2</div>
-        <div class="mt-3">
-          The woman expresses her opinion of the university’s plan. State her
-          opinion and explain the reasons she gives for holding that opinion.
-        </div>
-      </div>
-
-      <div v-if="step === 4" class="max-w-[576px] mx-auto text-center px-5">
-        <div class="text-xl md:text-2xl font-bold">Speaking Question 2</div>
+        <div class="text-xl md:text-2xl font-bold">Speaking Question 4</div>
         <div class="mt-3">
           Some people enjoy taking risks and trying new things. Others are not
           adventurous; they are cautious and prefer to avoid danger. Which
@@ -77,7 +47,7 @@
           class="mt-10 w-full rounded-[16px] py-7 px-5 bg-white flex flex-col items-center justify-center"
         >
           <div class="font-bold text-xl">Preparation Time</div>
-          <div class="flex items-center gap-3">
+          <div class="flex gap-3">
             <img src="@/assets/svg/clock.svg" alt="" class="w-[44px]" />
             <div class="font-bold text-[40px] md:text-[56px] text-[#293056]">
               00:06
@@ -86,8 +56,8 @@
         </div>
       </div>
 
-      <div v-if="step === 5" class="max-w-[576px] mx-auto text-center px-5">
-        <div class="text-xl md:text-2xl font-bold">Speaking Question 2</div>
+      <div v-if="step === 4" class="max-w-[576px] mx-auto text-center px-5">
+        <div class="text-xl md:text-2xl font-bold">Speaking Question 4</div>
         <div class="mt-3">
           Some people enjoy taking risks and trying new things. Others are not
           adventurous; they are cautious and prefer to avoid danger. Which
@@ -103,13 +73,14 @@
           class="mt-10 w-full rounded-[16px] py-7 px-5 text-white bg-[#293056] flex flex-col items-center justify-center"
         >
           <div class="font-bold text-xl">Response Time</div>
-          <div class="flex items-center gap-5">
-            <img src="@/assets/svg/mic-4.svg" alt="" class="w-[34px]" />
+          <div class="flex gap-5">
+            <img src="@/assets/svg/mic-4.svg" alt="" />
             <div class="font-bold text-[40px] md:text-[56px]">00:06</div>
           </div>
         </div>
       </div>
     </div>
+    
     <ModalVue :isOpen="isOpen" :title="title" :closeModal="closeModal">
       <img src="@/assets/svg/check.svg" alt="" class="mx-auto" />
       <div class="text-center mt-5 font-bold text-xl text-secondary">
@@ -120,14 +91,14 @@
       </div>
       <button
         class="disabled:bg-[#EAECF5] bg-primary py-2 px-6 mx-auto mt-5 rounded-md text-white disabled:text-[#B3B8DB] flex gap-2"
-        @click="$router.push('/temp/exam-3')"
+        @click="$router.push('/temp/exam-2')"
       >
         <span class="hidden lg:inline"> Next </span>
         <img src="@/assets/svg/arrow-right-gray.svg" alt="" />
       </button>
     </ModalVue>
     <ExamFooter
-      mainStep="2"
+      :mainStep="4"
       :setStep="setStep"
       :step="step"
       :openModal="openModal"
@@ -149,7 +120,6 @@ export default {
   data() {
     return {
       step: 0,
-      mainStep: 1,
       isOpen: false,
       title: "Response Submitted",
     };
@@ -169,8 +139,4 @@ export default {
   },
 };
 </script>
-<style>
-.blur {
-  filter: blur(5px);
-}
-</style>
+<style></style>

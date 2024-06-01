@@ -33,6 +33,8 @@ import TransistionTwo from "../views/template/TransistionTwo.vue";
 import TransistionThree from "../views/template/TransistionThree.vue";
 import StepOne from "../views/template/Exam/StepOne.vue";
 import StepTwo from "../views/template/Exam/StepTwo.vue";
+import StepThree from "../views/template/Exam/StepThree.vue";
+import StepFour from "../views/template/Exam/StepFour.vue";
 
 
 
@@ -82,6 +84,8 @@ const routes = [
   { path: "/temp/transition-3", name: "TransistionThree", component: TransistionThree},
   { path: "/temp/exam-1", name: "StepOne", component: StepOne},
   { path: "/temp/exam-2", name: "StepTwo", component: StepTwo},
+  { path: "/temp/exam-3", name: "StepThree", component: StepThree},
+  { path: "/temp/exam-4", name: "StepFour", component: StepFour},
 ];
 
 const router = createRouter({
