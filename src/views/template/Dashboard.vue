@@ -12,57 +12,40 @@
           <div class="mt-1">
             Choose a topic that interests you and start learning today!
           </div>
+          <ButtonVue
+            @click="handleTryIt()"
+            class="w-full md:w-1/2 mt-7 py-5"
+          >
+            <div class="font-bold">Take Your First Mock Exam</div>
+          </ButtonVue>
         </div>
         <div>
           <img src="@/assets/png/guest.png" alt="vtalks" class="mt-10 w-full" />
         </div>
       </div>
 
-      <div
-        class="mt-10 flex flex-col sm:flex-row sm:justify-end sm:items-center gap-5"
-      >
-        <div
-          class="flex items-center gap-2 bg-white border border-[#a1a1df] p-3 rounded-md"
-        >
-          <img src="@/assets/svg/Search.svg" alt="" />
-          <input
-            type="text"
-            placeholder="Search Lessons"
-            class="outline-none w-full"
-          />
-          <img src="@/assets/svg/Microphone.svg" alt="" />
-        </div>
-        <select
-          class="border border-primary p-3 rounded-md max-w-[100px] sm:max-w-[unset] sm:min-w-[100px]"
-        >
-          <option>Part 1</option>
-          <option>Part 2</option>
-        </select>
+      <div class="mt-10">
+        <h3 class="text-[24px] sm:text-[32px] font-bold">Mock Speaking Exam</h3>
+        <div>Sign up in less than 2 minutes.</div>
       </div>
 
-      <div class="mt-10 grid gap-10 md:grid-cols-2">
-        <div class="flex-1 border bg-white p-6 rounded-xl cursor-pointer" @click="$router.push('/temp/transition')" v-for="(data, index) in examsData" :key="index">
-          <div class="flex items-center gap-5">
-            <div :class="index % 2 === 0 ? 'box' : 'box-1'" class="max-w-[160px] w-full min-h-[160px] rounded-2xl p-3">
-              <div
-                class="border border-primary py-2 px-4 rounded-md text-sm font-bold text-primary bg-white w-max"
-              >
-                {{data.day}}
-              </div>
-              <div
-                class="mt-4 font-bold text-white text-center text-sm font-mono"
-              >
-                {{data.title}}
-              </div>
-            </div>
-            <div>
-              <h3 class="font-bold text-lg lg:text-2xl">
-                {{data.title}}
-              </h3>
-              <div class="flex items-center gap-2 mt-3">
-                <img src="@/assets/svg/user-icon.svg" alt="" />
-                <div class="text-primary font-medium">{{data.author}}</div>
-              </div>
+      <div class="mt-10 grid gap-10 md:grid-cols-2 pb-10">
+        <div
+          class="flex-1 border bg-white p-6 rounded-xl cursor-pointer"
+          @click="$router.push('/temp/transition')"
+          v-for="(data, index) in examsData"
+          :key="index"
+        >
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+            <h3 class="font-bold text-xl">
+              {{ data.title }}
+            </h3>
+            <div
+              class="w-full sm:w-[unset] flex items-center justify-center gap-3 border border-primary px-6 py-3 rounded-md"
+            >
+              Start
+
+              <img src="@/assets/svg/arrow-right.svg" alt="" />
             </div>
           </div>
         </div>
@@ -71,44 +54,34 @@
   </div>
 </template>
 <script>
+import ButtonVue from '../../components/Button.vue';
 import GuestHeaderVue from "../../components/Headers/GuestHeader.vue";
+
 export default {
   components: {
     GuestHeaderVue,
+    ButtonVue
   },
   data() {
     return {
       examsData: [
         {
-          day: "Day 1",
-          title: "Past Simple vs the Present Perfect",
-          author: "Mark Parker",
+          title: "Implicit and Explicit Memory",
         },
         {
-          day: "Day 2",
-          title: "Idioms with the Word Moon",
-          author: "Mark Parker",
+          title: "Swarm Intelligence",
         },
         {
-          day: "Day 3",
-          title: "Active Verbs & Stative Verbs",
-          author: "Mark Parker",
-          desc: "",
+          title: "Entertainment Merchandising",
         },
         {
-          day: "Day 4",
           title: "Business Meetings",
-          author: "Mark Parker",
         },
         {
-          day: "Day 5",
           title: "B1 Comparative Adjectives",
-          author: "Mark Parker",
         },
         {
-          day: "Day 6",
           title: "B1 Superlative Adjectives",
-          author: "Mark Parker",
         },
       ],
     };
