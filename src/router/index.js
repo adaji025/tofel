@@ -35,6 +35,8 @@ import StepOne from "../views/template/Exam/StepOne.vue";
 import StepTwo from "../views/template/Exam/StepTwo.vue";
 import StepThree from "../views/template/Exam/StepThree.vue";
 import StepFour from "../views/template/Exam/StepFour.vue";
+import Success from "../views/template/Success.vue";
+
 
 
 
@@ -86,6 +88,7 @@ const routes = [
   { path: "/temp/exam-2", name: "StepTwo", component: StepTwo},
   { path: "/temp/exam-3", name: "StepThree", component: StepThree},
   { path: "/temp/exam-4", name: "StepFour", component: StepFour},
+  { path: "/temp/exam/success", name: "Success", component: Success},
 ];
 
 const router = createRouter({

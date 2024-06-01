@@ -90,7 +90,7 @@
         @click="$router.push('/temp/exam-2')"
       >
         <span class="hidden lg:inline"> Next </span>
-        <img src="@/assets/svg/arrow-right-gray.svg" alt="" />
+        <img src="@/assets/svg/arrow-right-white.svg" alt="" />
       </button>
     </ModalVue>
     <ExamFooter :mainStep="1" :setStep="setStep" :step="step" :openModal="openModal" />

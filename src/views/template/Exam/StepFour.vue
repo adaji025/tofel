@@ -91,10 +91,10 @@
       </div>
       <button
         class="disabled:bg-[#EAECF5] bg-primary py-2 px-6 mx-auto mt-5 rounded-md text-white disabled:text-[#B3B8DB] flex gap-2"
-        @click="$router.push('/temp/exam-2')"
+        @click="$router.push('/temp/exam/success')"
       >
         <span class="hidden lg:inline"> Next </span>
-        <img src="@/assets/svg/arrow-right-gray.svg" alt="" />
+        <img src="@/assets/svg/arrow-right-white.svg" alt="" />
       </button>
     </ModalVue>
     <ExamFooter
