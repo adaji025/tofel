@@ -1,24 +1,42 @@
 <template>
-  <div class="text-secondary bg-[#F8F9FC] min-h-screen">
+  <div class="text-secondary bg-[#F8F9FC] min-h-screen pb-5">
     <AuthHeader />
+
     <div
-      class="mt-10 max-w-[560px] mx-auto bg-[#FCFCFD] sm:rounded-t-xl p-5 sm:p-10 border-b"
+      class="max-w-[560px] mx-auto bg-white py-10 px-6 grid gap-3 sm:rounded-[16px] mt-20"
     >
-      <div class="text-lg md:text-2xl font-bold">Pronunciations Practice</div>
-      <div class="mt-2">Past Simple vs the Present Perfect</div>
-    </div>
-    <div
-      class="max-w-[560px] mx-auto bg-white py-5 px-6 grid gap-3 sm:rounded-b-xl"
-    >
-      <div
-        @click="$router.push('/temp/lesson')"
-        class="px-5 py-3 flex gap-10 items-center justify-between rounded-xl bg-[#F8F9FC] cursor-pointer"
-        v-for="number in [...Array(5)]"
-        :key="number"
-        
-      >
-        <div class="font-bold">Have you been to Mexico?</div>
-        <img src="@/assets/svg/arrow-outline.svg" alt="" />
+      <img src="@/assets/png/transition-2.png" alt="" class="mx-auto" />
+      <div class="mt-10">
+        <div class="text-sm text-primary">Exam Prep</div>
+        <div class="font-bold text-lg md:text-2xl max-w-[320px]">
+          Ready to Take Control of Your Speaking!
+        </div>
+        <div class="text-secondary max-w-[464px] mt-2">
+          In this part, you can show how well you can talk about different
+          topics. There are four questions in this section.
+        </div>
+        <div class="mt-10 grid gap-5">
+          <div class="flex items-start gap-5">
+            <img src="@/assets/svg/prep-time.svg" alt="" />
+            <div>
+              <div class="font-bold text-lg md:text-xl">Prep time</div>
+              <div class="mt-1">
+                Before you answer each question, you'll get some time to get
+                ready.
+              </div>
+            </div>
+          </div>
+          <div class="flex items-start gap-5">
+            <img src="@/assets/svg/take-note.svg" alt="" />
+            <div>
+              <div class="font-bold text-lg md:text-xl">Take Notes</div>
+              <div class="mt-1">
+                You can write down notes to help you think of your answers, but
+                remember, your notes won't be graded.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

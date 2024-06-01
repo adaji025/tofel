@@ -30,8 +30,10 @@ import SelectCEFR from "../views/template/SelectCEFR.vue";
 import Dashboard from "../views/template/Dashboard.vue";
 import Transistion from "../views/template/Transistion.vue";
 import TransistionTwo from "../views/template/TransistionTwo.vue";
-import Lesson from "../views/template/Lesson.vue";
-import FreeLesson from "../views/template/FreeLesson.vue";
+import TransistionThree from "../views/template/TransistionThree.vue";
+import StepOne from "../views/template/Exam/StepOne.vue";
+import StepTwo from "../views/template/Exam/StepTwo.vue";
+
 
 
 
@@ -77,8 +79,9 @@ const routes = [
   { path: "/temp/guest", name: "TempDashboard", component: Dashboard},
   { path: "/temp/transition", name: "TempTransitionLearn", component: Transistion},
   { path: "/temp/transition-2", name: "TempTransistionTwo", component: TransistionTwo},
-  { path: "/temp/lesson", name: "TempLesson", component: Lesson},
-  { path: "/temp/free-lesson", name: "TempFreeLesson", component: FreeLesson},
+  { path: "/temp/transition-3", name: "TransistionThree", component: TransistionThree},
+  { path: "/temp/exam-1", name: "StepOne", component: StepOne},
+  { path: "/temp/exam-2", name: "StepTwo", component: StepTwo},
 ];
 
 const router = createRouter({
