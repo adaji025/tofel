@@ -26,7 +26,6 @@ import NotAuthorized from "@/views/auth/NotAuthorized.vue";
  */
 import TempFeedbackResult from "@/views/template/ResultsTemp.vue";
 import Learn from "../views/template/Learn.vue";
-import SelectCEFR from "../views/template/SelectCEFR.vue";
 import Dashboard from "../views/template/Dashboard.vue";
 import Transistion from "../views/template/Transistion.vue";
 import TransistionTwo from "../views/template/TransistionTwo.vue";
@@ -79,7 +78,6 @@ const routes = [
    */
   { path: "/temp/feedback/results", name: "TempFeedbackResult", component: TempFeedbackResult},
   { path: "/temp/learn", name: "TempLearn", component: Learn},
-  { path: "/temp/select-cefr", name: "TempSelectCEFR", component: SelectCEFR},
   { path: "/temp/guest", name: "TempDashboard", component: Dashboard},
   { path: "/temp/transition", name: "TempTransitionLearn", component: Transistion},
   { path: "/temp/transition-2", name: "TempTransistionTwo", component: TransistionTwo},
