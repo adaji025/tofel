@@ -1,5 +1,5 @@
 <template>
-  <div class="text-secondary bg-[#F8F9FC] min-h-screen pb-5">
+  <div class="text-secondary bg-[#F8F9FC] min-h-screen flex flex-col justify-between">
     <AuthHeader />
 
     <div
@@ -16,12 +16,19 @@
         </div>
         <div class="mt-10 grid gap-5">
           <img src="@/assets/png/transition-3.png" alt="" />
-          <div class="mt-5 flex justify-end">
-            <Button class="py-5" @click="$router.push('/temp/lesson')"
+          <div class="mt-5 sm:flex justify-end hidden">
+            <Button class="py-5" @click="$router.push('/temp/exam-1')"
               >Allow mic access</Button
             >
           </div>
         </div>
+      </div>
+    </div>
+    <div class="p-5 bg-white sticky bottom-0 sm:hidden shadow">
+      <div class="flex justify-end">
+        <Button class="py-5" @click="$router.push('/temp/exam-1')"
+          >Allow mic access</Button
+        >
       </div>
     </div>
   </div>

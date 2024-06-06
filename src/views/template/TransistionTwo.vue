@@ -1,5 +1,7 @@
 <template>
-  <div class="text-secondary bg-[#F8F9FC] min-h-screen pb-5">
+  <div
+    class="text-secondary bg-[#F8F9FC] min-h-screen flex flex-col justify-between"
+  >
     <AuthHeader />
 
     <div
@@ -37,6 +39,24 @@
             </div>
           </div>
         </div>
+      </div>
+      <button
+        class="disabled:bg-[#EAECF5] bg-primary py-4 px-6 ml-auto mt-5 rounded-md text-white disabled:text-[#B3B8DB] hidden sm:flex gap-2"
+        @click="$router.push('/temp/transition-3')"
+      >
+        <span class=""> Next </span>
+        <img src="@/assets/svg/arrow-right-white.svg" alt="" />
+      </button>
+    </div>
+    <div class="p-5 bg-white sticky bottom-0 sm:hidden shadow border-t">
+      <div class="flex justify-end">
+        <button
+          class="disabled:bg-[#EAECF5] bg-primary py-4 px-6 ml-auto mt-5 rounded-md text-white disabled:text-[#B3B8DB] flex gap-2"
+          @click="$router.push('/temp/transition-3')"
+        >
+          <span class=""> Next </span>
+          <img src="@/assets/svg/arrow-right-white.svg" alt="" />
+        </button>
       </div>
     </div>
   </div>
